@@ -1,0 +1,92 @@
+body{
+    background: #17242F;
+    height: 100%;
+    margin: 0;
+}
+
+.card {
+    top: 50px;
+    position: relative;
+    width: 300px;
+    height: 395px;
+    border: 10px solid #F54662;
+    margin: 60px auto 0 auto;
+    box-shadow: inset 10px 0px  15px 0px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(170, 128, 128, 0.767))), url("cutie.jpeg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.897), rgba(187, 142, 142, 0.459)), url(cutie.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.message {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    font-family: 'Nobile', sans-serif;
+}
+
+.card .message > p {
+    font-size: 1.1em;
+     color: #d14444;
+     list-style: 1.4;
+    font-style: italic;
+    text-align: center;
+    margin: 30px auto 0 auto;
+}
+
+.card .message .title {
+    font-size: 5em;
+    margin: 60px auto 60px auto;
+}
+
+.card .outercover {
+    position: absolute;
+    width: 300px;
+    height: 395px;
+    margin: -10px 0 0 -10px;
+    border: 10px solid #F54662;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+
+}
+
+.card .innercover {
+    position: absolute;
+    width: 300px;       /* both border*/
+    height: 395px;
+    border: 10px solid #F54662;
+    background-color: #fedcdc;
+    margin: -10px 0px 0 -10px;
+    backface-visibility: visible;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    transform-style: preserve-3d;
+    transform-origin: 0% 50% ;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+    overflow: visible;
+}
+
+.card .innercover img {
+            background-position: center;
+    -webkit-transform: rotateY(170deg);
+            transform: rotateY(170deg);
+    }
+
+.card:hover .outercover {
+-webkit-transform: perspective(800px) rotateY(-170deg);
+        transform: perspective(800px) rotateY(-170deg);
+
+    }
+
+
+.card:hover .innercover {
+-webkit-transform: perspective(800px) rotateY(-170deg);
+        transform: perspective(800px) rotateY(-170deg);
+-webkit-box-shadow: 7px 0 5px 0 rgba(0,0,0,0.3);
+        box-shadow: 7px 0 5px 0 rgba(0,0,0,0.3);
+    }
+
